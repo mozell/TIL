@@ -1,13 +1,23 @@
-from konlpy.tag import Hannanum
+from konlpy.tag import Kkma
 
-han = Hannanum()
-f = open('text.txt', 'r')
+kk = Kkma()
+f = open('elec.txt', 'r')
 lines = f.readlines()
 
+result = open('result.txt', 'w', encoding='utf-8')
 for line in lines :
     item = line.split(".")
 
     for i in item:
-        print(i)
-        print(han.pos(i))
+        try:
+            print(i)
+            print(kk.pos(i))
+            result.write(i)
+            result.write(str(kk.pos(i)))
+            result.write('\n')
+        except:
+            print()
+            continue
 
+f.close()
+result.close()

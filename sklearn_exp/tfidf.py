@@ -9,6 +9,6 @@ corpus = [
 ]
 
 
-tfidv = TfidfVectorizer().fit(corpus)
-a = tfidv.transform(corpus).toarray()
+tfidf = TfidfVectorizer().fit(corpus)
+a = tfidf.transform(corpus).toarray()
 print(a)
