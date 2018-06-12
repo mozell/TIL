@@ -3,28 +3,6 @@ from konlpy.tag import Kkma
 from gensim.models import word2vec
 from gensim.models.keyedvectors import KeyedVectors
 
-# # 분석할 문장 받고, 파싱하고 다른 텍스트로 저장
-# kk = Kkma()
-# f = open('elec.txt', 'r')
-# lines = f.readlines()
-#
-# result = open('result.pickle', 'wb')
-# for line in lines :
-#     item = line.split(".")
-#     # print("item >>",item)
-#
-#     for i in item:
-#         try:                        # 공백문장 스킵해서 파싱하고 저장
-#             # print("i    >>",i)
-#             # print("pos  >>",kk.pos(i))
-#             # print()
-#             pickle.dump(kk.pos(i), result, pickle.HIGHEST_PROTOCOL)
-#         except:
-#             continue
-#
-# f.close()
-# result.close()
-
 token = []
 with open('result.pickle', 'rb') as f:
     while True:
