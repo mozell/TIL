@@ -19,18 +19,16 @@ public class Q14405 {
 				indexList.add(i);
 			}	
 		}
-
-		//System.out.println("cnt>> "+cnt);
 		for(int j = cnt; j > 0; j--) {
 			int index = (int) indexList.get(j-1);
-			//System.out.println("bef pi>> "+s);
 			String b = s.substring(0, index);
 			String a = s.substring(index+2, s.length());
-			s = b+a;
-			//System.out.println("aft pi>> "+s);
+			s = b+"."+a;
 		}
 		cnt = 0;
 		indexList.clear();
+		
+		
 		
 		// ka delete
 		for(int i = 0; i < s.length()-1 ; i++) {
@@ -40,17 +38,17 @@ public class Q14405 {
 			}	
 		}
 
-		//System.out.println("cnt>> "+cnt);
 		for(int j = cnt; j > 0; j--) {
 			int index = (int) indexList.get(j-1);
-			//System.out.println("bef pi>> "+s);
 			String b = s.substring(0, index);
 			String a = s.substring(index+2, s.length());
-			s = b+a;
-			//System.out.println("aft pi>> "+s);
+			s = b+"."+a;
 		}
 		cnt = 0;
 		indexList.clear();
+		
+		
+		
 		// chu delete
 		for(int i = 0; i < s.length()-2 ; i++) {
 			if(s.charAt(i)=='c' && s.charAt(i+1) =='h' && s.charAt(i+2) =='u') {
@@ -59,18 +57,20 @@ public class Q14405 {
 			}	
 		}
 
-		//System.out.println("cnt>> "+cnt);
 		for(int j = cnt; j > 0; j--) {
 			int index = (int) indexList.get(j-1);
-			//System.out.println("bef pi>> "+s);
 			String b = s.substring(0, index);
 			String a = s.substring(index+3, s.length());
-			s = b+a;
-			//System.out.println("aft pi>> "+s);
+			s = b+"."+a;
 		}
+		
+		
+		s = s.replace(".", "");
+		System.out.println(s);
 		
 		if(s.isEmpty())
 			System.out.println("YES");
+		
 		else
 			System.out.println("NO");
 	}

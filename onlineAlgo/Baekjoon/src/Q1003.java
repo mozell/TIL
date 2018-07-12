@@ -1,4 +1,6 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Q1003 {
 	static int cnt0;
@@ -17,15 +19,14 @@ public class Q1003 {
 			return fibo(n-1) + fibo(n-2);
 	}
 	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) throws IOException {
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		Q1003 q = new Q1003();
 		
-		int testcase = sc.nextInt();
-		int n;
+		int testcase = Integer.parseInt(in.readLine());
+		
 		for(int i = 0; i < testcase; i++) {
-			n = sc.nextInt();
-			q.fibo(n);
+			q.fibo(Integer.parseInt(in.readLine()));
 			System.out.println(cnt0+" "+cnt1);
 			cnt0 = 0;
 			cnt1 = 0;
