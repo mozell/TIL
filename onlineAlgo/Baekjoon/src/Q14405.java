@@ -66,7 +66,6 @@ public class Q14405 {
 		
 		
 		s = s.replace(".", "");
-		System.out.println(s);
 		
 		if(s.isEmpty())
 			System.out.println("YES");
