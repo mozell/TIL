@@ -22,8 +22,6 @@ public class Q4344 {
 			
 			}
 			String result = String.format("%.3f", (overavg/num)*100);
-//			System.out.println(Math.round((overavg/num)*100000)/100000.0);
-//			System.out.println(Math.round((overavg/num)*100000)/100000.0*100+"%");
 			System.out.println(result+"%");
 		}
 	}
