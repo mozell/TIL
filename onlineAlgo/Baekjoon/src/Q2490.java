@@ -25,6 +25,5 @@ public class Q2490 {
 		for(int i = 0; i < 3; i++) {
 			System.out.println(resultArr[i]);
 		}
-	}
-		
+	}	
 }
